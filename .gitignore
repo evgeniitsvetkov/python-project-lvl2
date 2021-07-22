@@ -1,0 +1,8 @@
+# Enviroments
+.venv/
+
+# Mac OS
+.DS_Store
+
+# Byte-compiled
+__pycache__
