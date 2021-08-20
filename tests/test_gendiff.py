@@ -9,3 +9,13 @@ def test_plain_json():
 		data = f.read()
 
 	assert generator.generate_diff(file_path1, file_path2) == data
+
+
+def test_plain_yaml():
+	file_path1 = 'tests/fixtures/file1.yaml'
+	file_path2 = 'tests/fixtures/file2.yml'
+
+	with open('tests/fixtures/diff.txt') as f:
+		data = f.read()
+
+	assert generator.generate_diff(file_path1, file_path2) == data

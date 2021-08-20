@@ -1,16 +1,10 @@
 #!/usr/bin/env python
-import json
-
-
-def load_data_from_json(path_to_file):
-    with open(path_to_file) as f:
-        data = json.load(f)
-        return data
+from gendiff import parser
 
 
 def generate_diff(file_path1, file_path2):
-    data1 = load_data_from_json(file_path1)
-    data2 = load_data_from_json(file_path2)
+    data1 = parser.load_data(file_path1)
+    data2 = parser.load_data(file_path2)
 
     diff = ['{']
     diff_keys = list(data1.keys() | data2.keys())
